@@ -1,0 +1,17 @@
+[Unit]
+Description=demo chat app - nextjs
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+Environment=NODE_PORT=3000
+User=www-data
+WorkingDirectory=/var/www/node-app/demo-chat-app
+ExecStart=npm start
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
