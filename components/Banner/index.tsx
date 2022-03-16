@@ -4,7 +4,7 @@ export default function Banner(): JSX.Element {
 	return (
 		<Box position="relative" width="100%" height="600px" overflow="hidden">
 			<Image
-				src="images/main-banner-xjrdiz.png"
+				src="https://picsum.photos/1920/1080"
 				objectFit="cover"
 				width="100%"
 			/>
