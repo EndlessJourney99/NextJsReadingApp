@@ -84,3 +84,24 @@ export const ConvertDate = (UnixTime: number): string => {
 		date.getHours(),
 	)}:${GetFullDateTime.FullMinutes(date.getMinutes())}`;
 };
+
+export function CalculateTimeDiff(InputTime: string | Date) {
+	const CurrentTime = new Date();
+	const CommentDateTime = new Date(InputTime);
+	let Unit = 'minutes ago';
+	let TimeDiff = DateDiff.inMinutes(CommentDateTime, CurrentTime);
+	if (TimeDiff > 60) {
+		TimeDiff = DateDiff.inHours(CommentDateTime, CurrentTime);
+		Unit = 'hours ago';
+		if (TimeDiff > 24) {
+			TimeDiff = DateDiff.inDays(CommentDateTime, CurrentTime);
+			Unit = 'dates ago';
+			if (TimeDiff > 365) {
+				TimeDiff = DateDiff.inYears(CommentDateTime, CurrentTime);
+				Unit = 'years ago';
+			}
+		}
+	}
+	if (TimeDiff === 0) return 'recently';
+	return `${TimeDiff} ${Unit}`;
+}

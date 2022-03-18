@@ -7,7 +7,13 @@ export default function Card(props: {
 }): JSX.Element {
 	const { title, desc, ...rest } = props;
 	return (
-		<Box shadow="md" minWidth="250px" borderRadius="lg" {...rest}>
+		<Box
+			shadow="md"
+			minWidth="250px"
+			borderRadius="2xl"
+			{...rest}
+			overflow="hidden"
+		>
 			<Image
 				src="https://picsum.photos/400/300"
 				objectFit="cover"

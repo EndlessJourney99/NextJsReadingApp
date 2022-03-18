@@ -23,7 +23,7 @@ module.exports = {
 		'no-use-before-define': 0,
 		'@typescript-eslint/no-use-before-define': 2,
 		'import/order': [
-			2,
+			1,
 			{
 				groups: [
 					'builtin',
@@ -55,6 +55,7 @@ module.exports = {
 		'@typescript-eslint/no-shadow': ['error'],
 		'react/function-component-definition': 0,
 		'jsx-a11y/label-has-associated-control': 0,
+		'react/require-default-props': 0, // ????: Assign default value but still not recognize ???????
 	},
 	parserOptions: {
 		project: './tsconfig.eslint.json',

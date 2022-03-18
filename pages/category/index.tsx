@@ -15,7 +15,7 @@ import Layout from '../../components/_shared/_layout';
 import NewList from '../../components/ListItems';
 import Pagination from '../../components/Pagination';
 
-const Category: NextPage = () => {
+const CategoriesPage: NextPage = () => {
 	const router = useRouter();
 	const { MetaUrl } = router.query;
 	return (
@@ -25,9 +25,17 @@ const Category: NextPage = () => {
 				<meta name="description" content="React + Redux skeleton app" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Heading>Category page {MetaUrl}</Heading>
-			<Center>
-				<Box width="58rem" alignContent="center">
+			<Container
+				maxW="container.xl"
+				paddingTop="1em"
+				paddingBottom="5em"
+				height="100%"
+			>
+				<Heading as="h1" fontWeight="200">
+					List Categories
+				</Heading>
+				<Divider my={4} />
+				<Box width="full" alignContent="center">
 					<NewList cardSize="2xs" />
 					<Center>
 						<Pagination
@@ -37,9 +45,9 @@ const Category: NextPage = () => {
 						/>
 					</Center>
 				</Box>
-			</Center>
+			</Container>
 		</Layout>
 	);
 };
 
-export default Category;
+export default CategoriesPage;

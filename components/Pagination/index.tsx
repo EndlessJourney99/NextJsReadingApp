@@ -1,4 +1,11 @@
-import { Button, List, ListIcon, ListItem, Text } from '@chakra-ui/react';
+import {
+	Button,
+	List,
+	ListIcon,
+	ListItem,
+	Text,
+	ListProps,
+} from '@chakra-ui/react';
 import { useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -6,10 +13,12 @@ export default function Pagination({
 	iPageIndex,
 	iPaginatorRange,
 	iTotalPage,
+	styles,
 }: {
 	iPageIndex: number;
 	iPaginatorRange: number;
 	iTotalPage: number;
+	styles?: ListProps;
 }): JSX.Element {
 	const [activePage, setActivePage] = useState(iPageIndex);
 
@@ -25,9 +34,9 @@ export default function Pagination({
 				pageList.push(
 					<ListItem float="left">
 						<Button
-							colorScheme="teal"
+							color="white"
 							variant="ghost"
-							bg="teal.300"
+							bg="Background"
 							onClick={() => {
 								setActivePage(i);
 							}}
@@ -75,7 +84,7 @@ export default function Pagination({
 	};
 
 	return (
-		<List>
+		<List {...styles}>
 			<ListItem float="left">
 				<Button
 					colorScheme="teal"
