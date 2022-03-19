@@ -12,7 +12,6 @@ import {
 	Td,
 	Tfoot,
 } from '@chakra-ui/react';
-
 import Pagination from '../Pagination';
 
 export default function ChapterList({

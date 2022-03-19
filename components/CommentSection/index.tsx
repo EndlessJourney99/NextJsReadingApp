@@ -7,7 +7,6 @@ import {
 	Center,
 } from '@chakra-ui/react';
 import { useState } from 'react';
-
 import CommentHolder from './_commentHolder';
 
 const tempDate = new Date();

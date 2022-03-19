@@ -8,7 +8,6 @@ import {
 	Divider,
 	Tag,
 } from '@chakra-ui/react';
-
 import ChapterList from '../ChapterList';
 import CommentSection from '../CommentSection';
 import Rating from '../Rating';

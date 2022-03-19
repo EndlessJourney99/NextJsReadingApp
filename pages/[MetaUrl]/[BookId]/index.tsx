@@ -10,7 +10,6 @@ import {
 	Center,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-
 import Layout from '../../../components/_shared/_layout';
 import BookInformation from '../../../components/BookInformation';
 

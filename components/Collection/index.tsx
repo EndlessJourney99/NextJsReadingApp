@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react';
 import { useRef } from 'react';
-
 import Card from '../Card';
 
 let collectionClientX = 0;

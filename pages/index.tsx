@@ -9,7 +9,6 @@ import {
 	Divider,
 	Center,
 } from '@chakra-ui/react';
-
 import Banner from '../components/Banner';
 import Collection from '../components/Collection';
 import NewList from '../components/ListItems';

@@ -1,5 +1,4 @@
 import { Box } from '@chakra-ui/react';
-
 import Card from '../Card';
 
 export default function NewList({

@@ -10,7 +10,6 @@ import {
 	AbsoluteCenter,
 	Center,
 } from '@chakra-ui/react';
-
 import { CalculateTimeDiff } from '../../helpers/TimeConvertHelper';
 
 export default function CommentHolder({
