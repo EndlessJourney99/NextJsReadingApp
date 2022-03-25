@@ -75,7 +75,7 @@ export const GetFullDateTime = {
 };
 
 export const ConvertDate = (UnixTime: number): string => {
-	const date = new Date(UnixTime);
+	const date = new Date(UnixTime * 1000);
 	return `${GetFullDateTime.FullDate(
 		date.getDate(),
 	)}/${GetFullDateTime.FullMonth(
@@ -93,10 +93,10 @@ export function CalculateTimeDiff(InputTime: string | Date) {
 	if (TimeDiff > 60) {
 		TimeDiff = DateDiff.inHours(CommentDateTime, CurrentTime);
 		Unit = 'hours ago';
-		if (TimeDiff > 24) {
+		if (TimeDiff >= 24) {
 			TimeDiff = DateDiff.inDays(CommentDateTime, CurrentTime);
 			Unit = 'dates ago';
-			if (TimeDiff > 365) {
+			if (TimeDiff >= 365) {
 				TimeDiff = DateDiff.inYears(CommentDateTime, CurrentTime);
 				Unit = 'years ago';
 			}

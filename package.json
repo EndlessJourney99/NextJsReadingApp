@@ -1,7 +1,8 @@
 {
-	"name": "Affilate",
+	"name": "reading-app",
 	"private": true,
 	"scripts": {
+		"cypress": "cypress open",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
@@ -31,6 +32,7 @@
 		"@types/react": "17.0.40",
 		"@types/uuid": "^8.3.4",
 		"@typescript-eslint/eslint-plugin": "^5.9.1",
+		"cypress": "^9.5.2",
 		"eslint": "^8.7.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-next": "12.1.0",

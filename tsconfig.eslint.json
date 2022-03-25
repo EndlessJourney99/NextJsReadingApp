@@ -6,6 +6,7 @@
 		"**/*.tsx",
 		"**/*.css",
 		"./Components/**/*.tsx",
+		"./cypress/*",
 		"**/*.module.css",
 		"./next.config.js"
 	]
