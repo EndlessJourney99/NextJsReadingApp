@@ -37,6 +37,8 @@ export default function Pagination({
 							color="white"
 							variant="ghost"
 							bg="Background"
+							data-isActive="true"
+							data-index={i}
 							onClick={() => {
 								setActivePage(i);
 							}}
@@ -51,6 +53,8 @@ export default function Pagination({
 						<Button
 							colorScheme="teal"
 							variant="ghost"
+							data-isActive="false"
+							data-index={i}
 							onClick={() => {
 								setActivePage(i);
 							}}
@@ -70,6 +74,8 @@ export default function Pagination({
 					<Button
 						colorScheme="teal"
 						variant="ghost"
+						data-isActive="false"
+						data-index={iTotalPage}
 						onClick={() => {
 							setActivePage(iTotalPage);
 						}}

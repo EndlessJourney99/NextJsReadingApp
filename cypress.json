@@ -1,1 +1,9 @@
-{}
+{
+	"testFiles": "**/*.spec.{ts,tsx}",
+	"component": {
+		"componentFolder": "cypress/integration/2-test-component",
+		"testFiles": "**/*spec.{js,jsx,ts,tsx}",
+		"viewportHeight": 500,
+		"viewportWidth": 700
+	}
+}
